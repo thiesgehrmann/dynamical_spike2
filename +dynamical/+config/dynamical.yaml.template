@@ -1,0 +1,24 @@
+---
+################################################################################
+# Dynamical Config
+#
+# General global configuration parameters.
+################################################################################
+
+mainWindow:
+    description: 'Main window parameters'
+    name: 'Dynamical'
+    numberTitle: 'off'
+    size: [1200, 720]
+    tag: 'dynamical'
+
+recentFiles:
+    description: 'List of last read files'
+    maxFiles: 5
+    list: []
+
+analysis:
+    ignoredIntervalTypes: ['AllFile', 'File01', 'File02', 'File03']
+
+# Global debug level
+debugLevel: 1

@@ -1,0 +1,175 @@
+<deployment-project plugin="plugin.toolbox" plugin-version="1.0">
+  <configuration build-checksum="3514467844" file="/Users/eganma/Projects/dynamical/DynamicalToolbox.prj" location="/Users/eganma/Projects/dynamical" name="DynamicalToolbox" target="target.toolbox" target-name="Package Toolbox">
+    <param.appname>DynamicalToolbox</param.appname>
+    <param.authnamewatermark>Christopher Broussard</param.authnamewatermark>
+    <param.email>cbroussa@umich.edu</param.email>
+    <param.company>University of Michigan</param.company>
+    <param.summary />
+    <param.description>Mercurial Repository: https://bitbucket.org/umarsdev/dynamical</param.description>
+    <param.screenshot />
+    <param.version>2.9.1</param.version>
+    <param.output>${PROJECT_ROOT}/DynamicalToolbox.mltbx</param.output>
+    <param.products.name />
+    <param.products.id />
+    <param.products.version />
+    <param.platforms />
+    <param.guid>992d7e6b-372f-439a-ba04-c104b4c6fba8</param.guid>
+    <param.exclude.filters>% List files contained in your toolbox folder that you would like to exclude
+% from packaging.  Excludes should be listed relative to the toolbox folder.
+% Some examples of how to specify excludes are provided below:
+%
+% A single file in the toolbox folder:
+.hg
+.hgignore
+.hgcheck
+.DS_Store
+private
+dynamical.m
+.hgtags
+*.asv
+
+%
+% A single file in a subfolder of the toolbox folder:
+% example/.svn
+%
+% All files in a subfolder of the toolbox folder:
+% example/*
+%
+% All files of a certain name in all subfolders of the toolbox folder:
+% **/.svn
+%
+% All files matching a pattern in all subfolders of the toolbox folder:
+% **/*.bak
+%</param.exclude.filters>
+    <param.examples />
+    <param.demosxml />
+    <param.apps>
+      <file>${PROJECT_ROOT}/Dynamical.mlappinstall</file>
+    </param.apps>
+    <param.registered.apps />
+    <param.docs />
+    <param.getting.started.guide />
+    <param.matlabpath.excludes />
+    <param.javaclasspath.excludes />
+    <unset>
+      <param.summary />
+      <param.screenshot />
+      <param.output />
+      <param.products.name />
+      <param.products.id />
+      <param.products.version />
+      <param.platforms />
+      <param.examples />
+      <param.demosxml />
+      <param.registered.apps />
+      <param.docs />
+      <param.getting.started.guide />
+      <param.matlabpath.excludes />
+      <param.javaclasspath.excludes />
+    </unset>
+    <fileset.rootdir>
+      <file>/Users/eganma/Projects/dynamical</file>
+    </fileset.rootdir>
+    <fileset.rootfiles>
+      <file>${PROJECT_ROOT}/+dynamical</file>
+      <file>${PROJECT_ROOT}/Dynamical.mlappinstall</file>
+      <file>${PROJECT_ROOT}/Dynamical_resources</file>
+      <file>${PROJECT_ROOT}/cdf_batch.m</file>
+      <file>${PROJECT_ROOT}/dynamical_batch.m</file>
+      <file>${PROJECT_ROOT}/dynamical_cli.m</file>
+    </fileset.rootfiles>
+    <fileset.depfun.included />
+    <fileset.depfun.excluded>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/ExcelCol/code/ExcelCol.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/GUI Layout Toolbox/code/layout/+uix/+mixin/Container.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/GUI Layout Toolbox/code/layout/+uix/+mixin/Panel.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/GUI Layout Toolbox/code/layout/+uix/Box.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/GUI Layout Toolbox/code/layout/+uix/BoxPanel.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/GUI Layout Toolbox/code/layout/+uix/ChildEvent.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/GUI Layout Toolbox/code/layout/+uix/ChildObserver.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/GUI Layout Toolbox/code/layout/+uix/Container.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/GUI Layout Toolbox/code/layout/+uix/Empty.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/GUI Layout Toolbox/code/layout/+uix/FigureData.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/GUI Layout Toolbox/code/layout/+uix/FigureObserver.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/GUI Layout Toolbox/code/layout/+uix/HBox.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/GUI Layout Toolbox/code/layout/+uix/Node.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/GUI Layout Toolbox/code/layout/+uix/Panel.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/GUI Layout Toolbox/code/layout/+uix/SelectionData.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/GUI Layout Toolbox/code/layout/+uix/Text.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/GUI Layout Toolbox/code/layout/+uix/VBox.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/GUI Layout Toolbox/code/layout/+uix/calcPixelSizes.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/GUI Layout Toolbox/code/layout/+uix/setPosition.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/GUI Layout Toolbox/code/layout/+uix/tracking.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/NEXToolbox/code/+nex/NexVariableTypes.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/NEXToolbox/code/+nex/closenexfile.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/NEXToolbox/code/+nex/getintervaltimes.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/NEXToolbox/code/+nex/getneurondata.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/NEXToolbox/code/+nex/listintervalnames.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/NEXToolbox/code/+nex/opennexfile.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/NEXToolbox/code/+nex/readfileheader.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/NEXToolbox/code/+nex/readvariabledata.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/NEXToolbox/code/+nex/readvariableheaders.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/YAMLToolbox/code/+yaml/DateTime.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/YAMLToolbox/code/+yaml/ReadYaml.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/YAMLToolbox/code/+yaml/ReadYamlRaw.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/YAMLToolbox/code/+yaml/WriteYaml.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/YAMLToolbox/code/+yaml/deflateimports.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/YAMLToolbox/code/+yaml/doinheritance.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/YAMLToolbox/code/+yaml/dosubstitution.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/YAMLToolbox/code/+yaml/iscolumnvector.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/YAMLToolbox/code/+yaml/ismymatrix.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/YAMLToolbox/code/+yaml/isord.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/YAMLToolbox/code/+yaml/isrowvector.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/YAMLToolbox/code/+yaml/issingle.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/YAMLToolbox/code/+yaml/kwd_parent.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/YAMLToolbox/code/+yaml/makematrices.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/YAMLToolbox/code/+yaml/merge_struct.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/YAMLToolbox/code/+yaml/mergeimports.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/xls_delete_sheets/code/xls_check_if_open.m</file>
+      <file>/Users/eganma/Documents/MATLAB/Add-Ons/Toolboxes/xls_delete_sheets/code/xls_delete_sheets.m</file>
+    </fileset.depfun.excluded>
+    <fileset.package />
+    <build-deliverables>
+      <file location="/Users/eganma/Projects/dynamical" name="DynamicalToolbox.mltbx" optional="false">/Users/eganma/Projects/dynamical/DynamicalToolbox.mltbx</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>/Applications/MATLAB_R2017b.app</root>
+      <toolboxes>
+        <toolbox name="fixedpoint" />
+        <toolbox name="matlabcoder" />
+        <toolbox name="embeddedcoder" />
+      </toolboxes>
+      <toolbox>
+        <fixedpoint>
+          <enabled>true</enabled>
+        </fixedpoint>
+      </toolbox>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
+      <toolbox>
+        <embeddedcoder>
+          <enabled>true</enabled>
+        </embeddedcoder>
+      </toolbox>
+    </matlab>
+    <platform>
+      <unix>true</unix>
+      <mac>true</mac>
+      <windows>false</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.12.6</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>maci64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>

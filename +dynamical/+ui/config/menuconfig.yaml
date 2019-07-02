@@ -1,0 +1,70 @@
+---
+# Defines the main menu for Dynamical.  Each menu item must look like
+#
+# menu:
+#     # Text displayed to the user in the GUI.
+#     label: 'mylabel'
+#
+#     # Tag connected to the menu item.  This tag can be used to find an object
+#     # later using findobj('Tag', 'mytag').
+#     tag: 'mytag'
+#
+# Optionally, one can add a callback routine to the menu item by using the
+# 'callback' field.  An accelerator can be added with the 'accelerator' field.
+#
+# Example:
+# menu:
+#     label: 'mylabel'
+#     tag: 'mytag'
+#
+#     # Specify the string name of the function.  It must be on the path for it
+#     # to work.  No arguments should be specified and the function should
+#     # conform to the format as specified in the MATLAB docs when you search
+#     # for "Write Callbacks for Apps Created Programmatically".
+#     callback: 'callbackFunctionName'
+#
+#     # Accelerator key to associated with the menu.  Look at the MATLAB
+#     # documentation for "Uimenu Properties" for more information on
+#     # accelerator key bindings for menu items.
+#     accelerator: 'e'
+#
+# Adding submenus is simple.  All one needs to do is add a submenu field then
+# add a menu item following the same format as decribed above.
+#
+# Example:
+# menu:
+#     label: 'mylabel'
+#     tag: 'mytag'
+#     callback: 'callbackFunctionName'
+#     submenu:
+#         submenu1:
+#             label: 'mylabel2'
+#             tag: 'mytag2'
+#             callback: 'callbackFunctionName2'
+
+file:
+    label: 'File'
+    tag: 'menu_file'
+    submenu:
+        open:
+            label: 'Open'
+            tag: 'menu_file_open'
+            callback: 'dynamical.ui.callbacks.menu.open'
+        exit:
+            label: 'Exit'
+            tag: 'menu_file_exit'
+            callback: 'dynamical.ui.callbacks.menu.exit'
+
+tools:
+    label: 'Tools'
+    tag: 'menu_tools'
+    submenu:
+        popout_plot:
+            label: 'Popout Plot'
+            tag: 'menu_tools_popoutplot'
+            callback: 'dynamical.ui.callbacks.menu.popoutplot'
+            accelerator: 'e'
+
+about:
+    label: 'About'
+    tag: 'menu_about'

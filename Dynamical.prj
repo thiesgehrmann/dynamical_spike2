@@ -1,0 +1,79 @@
+<deployment-project plugin="plugin.apptool" plugin-version="1.0">
+  <configuration build-checksum="3985597290" file="/Users/eganma/Projects/dynamical/Dynamical.prj" location="/Users/eganma/Projects/dynamical" name="Dynamical" target="target.mlapps" target-name="Package App">
+    <param.appname>Dynamical</param.appname>
+    <param.authnamewatermark>Christopher Broussard</param.authnamewatermark>
+    <param.email>cbroussa@umich.edu</param.email>
+    <param.company>University of Michigan</param.company>
+    <param.icon>${PROJECT_ROOT}/Dynamical_resources/icon_24.png</param.icon>
+    <param.icons>
+      <file>${PROJECT_ROOT}/Dynamical_resources/icon_48.png</file>
+      <file>${PROJECT_ROOT}/Dynamical_resources/icon_24.png</file>
+      <file>${PROJECT_ROOT}/Dynamical_resources/icon_16.png</file>
+    </param.icons>
+    <param.summary>Dynamical UI associated with the Dynamical Toolbox.</param.summary>
+    <param.description>Mercurial Repository: https://bitbucket.org/umarsdev/dynamical</param.description>
+    <param.screenshot>${PROJECT_ROOT}/Dynamical_resources/screenshot.png</param.screenshot>
+    <param.version>2.9.1</param.version>
+    <param.products.name />
+    <param.products.id />
+    <param.products.version />
+    <param.platforms />
+    <param.output>/Users/eganma/Projects/dynamical</param.output>
+    <param.guid>99f10fba-6dae-497e-88da-71518d1d3e55</param.guid>
+    <unset>
+      <param.products.name />
+      <param.products.id />
+      <param.products.version />
+      <param.platforms />
+      <param.output />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}/dynamical.m</file>
+    </fileset.main>
+    <fileset.depfun />
+    <fileset.resources />
+    <fileset.package />
+    <build-deliverables>
+      <file location="/Users/eganma/Projects" name="dynamical" optional="false">/Users/eganma/Projects/dynamical</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>/Applications/MATLAB_R2017b.app</root>
+      <toolboxes>
+        <toolbox name="fixedpoint" />
+        <toolbox name="matlabcoder" />
+        <toolbox name="embeddedcoder" />
+      </toolboxes>
+      <toolbox>
+        <fixedpoint>
+          <enabled>true</enabled>
+        </fixedpoint>
+      </toolbox>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
+      <toolbox>
+        <embeddedcoder>
+          <enabled>true</enabled>
+        </embeddedcoder>
+      </toolbox>
+    </matlab>
+    <platform>
+      <unix>true</unix>
+      <mac>true</mac>
+      <windows>false</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.12.6</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>maci64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>
