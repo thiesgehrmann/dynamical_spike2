@@ -20,10 +20,12 @@ quantities https://files.pythonhosted.org/packages/89/44/a875b723f70935b022d6b7a
 
 Functions I need to make SPIKE2 ports for
 
- * nex.opennexfile
- * nex.listintervalnames
- * nex.closenexfile
- * nex.readfileheader
- * nex.getneurondata
- * nex.getintervaltimes
+These already work fine!
+opennexfile -> openfile
+closenexfile -> closefile
+
+listintervalnames
+readfileheader
+getneurondata
+getintervaltimes
 

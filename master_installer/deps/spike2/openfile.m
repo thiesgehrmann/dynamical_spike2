@@ -1,23 +1,23 @@
-function [fid, wasOpened] = opennexfile(input1)
-% OPENNEXFILE  Opens a nex file and/or preps it for access.
+function [fid, wasOpened] = openfile(input1)
+% OPENNFILE  Opens a SPIKE2 file and/or preps it for access.
 %
 % Syntax:
-% [fid, wasOpened] = OPENNEXFILE(nexFileName)
-% [fid, wasOpened] = OPENNEXFILE(fileID)
+% [fid, wasOpened] = OPENFILE(spike2FileName)
+% [fid, wasOpened] = OPENFILE(fileID)
 %
 % Description:
-% Opens a nex file and/or preps it for access.  If a filename is specified,
+% Opens a SPIKE2 file and/or preps it for access.  If a filename is specified,
 % the file is opened and a file descriptor is returned.  If a file
 % descriptor is passed, the file position indicator is set to the beginning
 % of the file via frewind.
 %
 % Input:
-% nexFileName (string) - The name of the NEX file from which to
+% nexFileName (string) - The name of the SPIKE2 file from which to
 %     extract the header.
-% fileID (integer) - A file ID to a previously opened NEX file via fopen.
+% fileID (integer) - A file ID to a previously opened SPIKE2 file via fopen.
 %
 % Output:
-% fileID (integer) - A file descriptor pointing to the beginning of the NEX
+% fileID (integer) - A file descriptor pointing to the beginning of the SPIKE2
 %     file.
 % wasOpened (logical) - True if the file was opened and a new file
 %     descriptor was created, i.e. a string was passed to this function.

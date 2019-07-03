@@ -1,18 +1,18 @@
-function closenexfile(fileID)
-% CLOSENEXFILE  Closes a NEX file and performs any cleanup.
+function closefile(fileID)
+% CLOSEFILE  Closes a NEX file and performs any cleanup.
 %
 % Syntax:
-% CLOSENEXFILE(fileID)
+% CLOSEFILE(fileID)
 %
 % Description:
-% Closes a NEX file and performs any cleanup operations required.
+% Closes a SPIKE2 file and performs any cleanup operations required.
 %
 % Input:
-% fileID (integer) - A file ID to a previously opened NEX file via
+% fileID (integer) - A file ID to a previously opened SPIKE2 file via
 %     fopen.
 %
 % Throws:
-% nex:closenexfile:FileCloseError - Failure to close the specified NEX file.
+% nex:closenexfile:FileCloseError - Failure to close the specified SPIKE2 file.
 
 narginchk(1, 1);
 
