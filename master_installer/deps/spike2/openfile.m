@@ -55,8 +55,8 @@ else
     % the code above.
     fid = input1;
     
-    % Rewind the file descriptor to the beginning of the NEX file.
-    frewind(fid);
+    % Rewind the file descriptor to the beginning of the SPIKE2 file.
+    % frewind(fid); % NOT NEEDED IN SPIKE2 FILES
     
     wasOpened = false;
 end
