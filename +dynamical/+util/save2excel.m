@@ -3,6 +3,9 @@ function save2excel(nexFileName, stabilityData, amdStruct, hWaitbar, ...
 % SAVE2EXCEL  Saves the stability data to an Excel file.
 %
 %
+
+return
+
 import dynamical.util.averagesequentialbouts;
 
 narginchk(6, 6);

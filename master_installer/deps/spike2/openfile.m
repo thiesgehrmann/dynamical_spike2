@@ -23,8 +23,10 @@ function [fid, wasOpened] = openfile(input1)
 %     descriptor was created, i.e. a string was passed to this function.
 %
 % Throws:
-% nex:opennexfile:FileOpenError - Failure to open/initialize the specified
-%     NEX file.
+% spike2:openfile:FileOpenError - Failure to open/initialize the specified
+%     SPIKE2 file.
+
+loadCEDS64()
 
 %% Validate Input
 narginchk(1, 1);
@@ -39,14 +41,14 @@ validateattributes(input1, ...          % File ID or File Name
 
 
 %% Setup File Access
-% Open the NEX file if we were passed a filename.  If passed a file ID,
+% Open the SPIKE2 file if we were passed a filename.  If passed a file ID,
 % rewind the file position indicator to the beginning of the NEX file where
 % the file header data is located.
 
 if ischar(input1) || isstring(input1)
-    % Open the NEX file.
-    [fid, errorMessage] = fopen(input1, 'r', 'l', 'US-ASCII');
-    assert(fid ~= -1, 'nex:opennexfile:FileOpenError', errorMessage);
+    % Open the SPIKE2 file.
+    fid = CEDS64Open(input1);
+    assert(fid > 1, 'spike2:openfile:FileOpenError', 'Could not open file %s.', input1);
     wasOpened = true;
 else
     % Copy the file ID to a more descriptive label matching the 'fid' from

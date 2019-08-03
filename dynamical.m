@@ -16,10 +16,6 @@ config = dynamical.config.readconfig(false);
 % Go ahead and write the config file now in the event one doesn't exist in
 % the user's local config directory.
 dynamical.config.writeconfig(config);
-
-%% Here load the CEDMAT library
-addpath(getenv('CEDS64ML'))
-CEDS64LoadLib(getenv('CEDS64ML'))
     
 % Look for the main dynamical window.  If it already exists, we will bring
 % it to the front.

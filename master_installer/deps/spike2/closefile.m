@@ -1,5 +1,5 @@
 function closefile(fileID)
-% CLOSEFILE  Closes a NEX file and performs any cleanup.
+% CLOSEFILE  Closes a SPIKE2 file and performs any cleanup.
 %
 % Syntax:
 % CLOSEFILE(fileID)
@@ -12,7 +12,9 @@ function closefile(fileID)
 %     fopen.
 %
 % Throws:
-% nex:closenexfile:FileCloseError - Failure to close the specified SPIKE2 file.
+% spike2:closefile:FileCloseError - Failure to close the specified SPIKE2 file.
+
+loadCEDS64()
 
 narginchk(1, 1);
 
@@ -23,5 +25,5 @@ validateattributes(fileID, {'numeric'}, {'nonempty' 'scalar'}, ...
 status = fclose(fileID);
 
 % If we got an error closing the NEX file, throw an error.
-assert(status == 0, 'nex:closenexfile:FileCloseError', ...
-    'Unable to close filed ID: %g', fileID);
+assert(status == 0, 'spike2:closefile:FileCloseError', ...
+    'Unable to close file descriptor ID: %g', fileID);

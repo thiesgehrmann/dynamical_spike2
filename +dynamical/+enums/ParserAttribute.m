@@ -1,8 +1,8 @@
 classdef ParserAttribute
     enumeration
-        ScalarNonEmpty ({'scalar', 'nonempty'})
-        Scalar ({'scalar'})
-        NonEmpty ({'nonempty'})
+        ScalarNotEmpty ({'scalar', 'nonempty'}),
+        Scalar ({'scalar'}),
+        NotEmpty ({'nonempty'})
     end
     
     properties (SetAccess = immutable, GetAccess = private)
