@@ -45,15 +45,15 @@ These already work fine!
     - [ ] fileheader.numvars -> The number of variables defined in the SPIKE2 file
   - Still to figure out:
     - How to identify the number of variables. OR EVEN HOW TO GET THE VARIABLES!!!! :S
- - [ ] listintervalnames. **NOTE: SPIKE2 files don't support intervals. This function will return just a single interval.**
+ - [X] listintervalnames. **NOTE: SPIKE2 files don't support intervals. This function will return just a single interval.**
    - Used in:
      - +dynamical\+ui\+objects\@AMDParamsPanel\fileOpenedHandler.m
      - +dynamical\cutdata.m
- - [ ] getintervaltimes. **NOTE: SPIKE2 files don't support intervals. This function will return just a single interval.**
+ - [X] getintervaltimes. **NOTE: SPIKE2 files don't support intervals. This function will return just a single interval.**
    - Used in:
      - +dynamical\+math\amd.m
      - +dynamical\cutdata.m
- - [ ] getneurondata. This is the core of the challenge.
+ - [X] getneurondata. This is the core of the challenge.
    - Used in:
      - +dynamical\+math\amd.m
    - Steps
