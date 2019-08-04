@@ -1,21 +1,23 @@
-function neuronTable = getneurondata(input1, indices)
-% GETNEURONDATA  Extracts the data for specified neurons from NEX data/file.
+function neuronTable = getneurondata(input1, channels)
+% GETNEURONDATA  Extracts the data for neurons from a SPIKE2 data/file.
 %
 % Syntax:
-% % Get all neuron data.
-% neuronTable = GETNEURONDATA(nexFileName)
-% ___ = GETNEURONDATA(fileID)
-% ___ = GETNEURONDATA(___, indices)
+% % Get all neuron data from all channels.
+% neuronTable = GETNEURONDATACHANNEL(spikeFileName)
+% ___ = GETNEURONDATACHANNEL(fileID)
+% % Get only neurons from the specified channels
+% neuronTable = GETNEURONDATACHANNEL(spikeFileName, channels)
+% ___ = GETNEURONDATACHANNEL(fileID, channels)
 %
 % Description:
-% Extracts all the data for specified neurons from a NEX file or a NEX
-% data struct.  All available information about the neurons is returned in
-% a table format.
+% Extracts all the data for neurons in channels from a SPIKE2 file.
+%  All available information about the neurons is returned in
+%  a table format.
 %
 % Input:
-% nexFileName (string) - The name of the NEX file to read.
-% fileID (number) - A file ID to a previously opened NEX file via fopen.
-% indices (vector) - Numeric indices of specific neurons to read.
+% spikeFileName (string) - The name of the SPIKE2 file to read.
+% fileID (number) - A file ID to a previously opened SPIKE2 file via fopen.
+% channel (int) - Numeric indices of specific neurons to read.
 %
 % Output:
 % neuronTable (table) - Table of extracted neuron data.  Each column
@@ -23,11 +25,11 @@ function neuronTable = getneurondata(input1, indices)
 %
 %     Variables:
 %     * name (categorical)
-%     * varVersion (scalar)
-%     * wireNumber (scalar)
-%     * unitNumber (scalar)
-%     * xPos (scalar)
-%     * yPos (scalar)
+%     * varVersion (scalar) NOTE: This variable means NOTHING in SPIKE2
+%     * wireNumber (scalar) NOTE: This variable means NOTHING in SPIKE2
+%     * unitNumber (scalar) NOTE: This variable means NOTHING in SPIKE2
+%     * xPos (scalar)       NOTE: This variable means NOTHING in SPIKE2
+%     * yPos (scalar)       NOTE: This variable means NOTHING in SPIKE2
 %     * timestamps (cell) - Contains a Mx1 array of the timestamp data.
 
 %% Setup
@@ -35,35 +37,36 @@ function neuronTable = getneurondata(input1, indices)
 
 narginchk(1, 2);
 
-% Set the flag that indicates if we're using indices when reading the
-% variable data.
-if nargin == 2
-    useIndices = true;
-    validateattributes(indices, {'numeric'}, {'vector'}, mfilename, 'indices', 2);
-else
-    useIndices = false;
-end
+[fh, wasOpened] = openfile(input1);
 
-% Open the nex file and get a file descriptor.
-[fid, wasOpened] = nex.opennexfile(input1);
 
-% Register a cleanup object that will close the file ID, but only if a
-% filename was specified.
 if wasOpened
-    cleanupObj = onCleanup(@() nex.closenexfile(fid));
+  cleanupObj = onCleanup(@() closefile(fh));
 end
 
-%% Data Extraction
-% Pull the neuron data out of the NEX data file.  If indices were
-% specified, we'll extract only a subset.
+valid_channels = getChannelsOfType(fh, [5,6])
 
-if useIndices   
-    % Extract the raw neuron data.
-    neuronData = nex.readvariabledata(fid, nex.NexVariableTypes.Neuron, ...
-        'Indices', indices);
+if nargin == 2
+	% If channels are specified, then 
+  useIndices = true;
+  validateattributes(channels, {'numeric'}, {'vector'}, mfilename, 'indices', 2);
+  channels = arrayfun(@(x) ismember(x, valid_channels), channels);
+  assert(size(channels) > 0, 'spike2:getneurondata:NoValidChannels', 'You did not specify any valid chanels. They must be Marker|WaveMark types.');
 else
-    neuronData = nex.readvariabledata(fid, nex.NexVariableTypes.Neuron);
+	channels = valid_channels
 end
 
-% Stick everything into a table.
-neuronTable = struct2table([neuronData{:}], 'AsArray', true);
+neuronData = arrayfun(@(cid) getneurondatachannel(input1, cid), channels);
+
+
+% There MUST be a better way to do this :S
+nd.name       = cat(1, neuronData.name)
+nd.varVersion = cat(1, neuronData.varVersion)
+nd.wireNumber = cat(1, neuronData.wireNumber)
+nd.unitNumber = cat(1, neuronData.unitNumber)
+nd.xPos       = cat(1, neuronData.xPos      )
+nd.yPos       = cat(1, neuronData.yPos      )
+nd.timestamps = cat(1, neuronData.timestamps)
+
+% Throw it all into a table
+neuronTable = nstruct2table(nd);

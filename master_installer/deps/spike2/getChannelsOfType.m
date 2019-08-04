@@ -48,4 +48,4 @@ if wasOpened
     cleanupObj = onCleanup(@() closefile(fh));
 end
 
-channels = find(ismember(arrayfun( @(cid) CEDS64ChanType(fh, cid), 1:CEDS64MaxChan(fh)), type))
+channels = find(ismember(arrayfun( @(cid) CEDS64ChanType(fh, cid), 1:CEDS64MaxChan(fh)), type));

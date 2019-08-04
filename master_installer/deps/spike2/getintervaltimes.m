@@ -34,65 +34,19 @@ function intervalTable = getintervaltimes(input1, intervalName, isCaseSensitive)
 
 narginchk(2, 3);
 
-if nargin < 3
-    isCaseSensitive = false;
-end
+% SPIKE2 doesn't have intervals, so I put here a dummy one.
 
-% The interval name must be a non-empty string.
-validateattributes(intervalName, {'char', 'string'}, {'vector', 'nonempty'}, ...
-    mfilename, 'intervalName', 2);
-
-validateattributes(isCaseSensitive, {'logical'}, {'scalar' 'nonempty'}, ...
-    mfilename, 'isCaseSensitive', 3);
-
-% Open the nex file and get a file descriptor.
-[fid, wasOpened] = nex.opennexfile(input1);
+% Open the SPIKE2 file.
+[fh, wasOpened] = openfile(input1);
 
 % Register a cleanup object that will close the file ID, but only if a
 % filename was specified.
 if wasOpened
-    cleanupObj = onCleanup(@() nex.closenexfile(fid));
+    cleanupObj = onCleanup(@() closefile(fh));
 end
 
-%% Extract Interval Times
+interval.Start    = 0
+interval.End      = CEDS64TicksToSecs(fh, CEDS64MaxTime(fh))
+interval.Duration = interval.End
 
-% Get a list of interval names found in the nex data.  Make the list upper
-% case for easy string matching.
-allIntervalNames = nex.listintervalnames(fid);
-
-% Make sure the desired interval type exists in the list of available
-% interval types.
-if isCaseSensitive
-    assert(ismember(intervalName, allIntervalNames), ...
-        'nex:getintervaltimes:invalidIntervalName', ...
-        'Interval name "%s" does not exist in the NEX data.', intervalName);
-else
-    assert(ismember(upper(intervalName), upper(allIntervalNames)), ...
-        'nex:getintervaltimes:invalidIntervalName', ...
-        'Interval name "%s" does not exist in the NEX data.', intervalName);
-end
-
-% Pull out the variable data which contains the interval times.
-intervalData = nex.readvariabledata(fid, nex.NexVariableTypes.Interval);
-
-% Find the index of the desired interval.
-if isCaseSensitive
-    iInterval = cellfun(@(x) strcmp(intervalName, x.name), intervalData);
-else
-    iInterval = cellfun(@(x) strcmpi(intervalName, x.name), intervalData);
-end
-
-% If all the checks above worked we shouldn't find nothing, but we're
-% paranoid...
-assert(sum(iInterval) > 0, 'Unexpected Error: Did not find "%s" in the interval data.', ...
-    intervalName);
-
-% We also don't want more than 1 match for the specified interval name.
-assert(sum(iInterval) == 1, 'Too many intervals found when searching for: %s', ...
-    intervalName);
-
-% Create the table.
-intervalTable = table(intervalData{iInterval}.intStarts, ...
-    intervalData{iInterval}.intEnds, ...
-    intervalData{iInterval}.intEnds - intervalData{iInterval}.intStarts, ...
-    'VariableNames', {'Start' 'End', 'Duration'});
+intervalTable = struct2table(interval)

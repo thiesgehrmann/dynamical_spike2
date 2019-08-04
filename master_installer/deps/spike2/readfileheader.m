@@ -72,3 +72,5 @@ fileHeader.tend = CEDS64TicksToSecs(fh, CEDS64ChanMaxTime(fh, 34));
 
 % Number of variables in the file, e.g. continuous, event, markers.
 fileHeader.numvars = 0;
+fileHeader.numchannels = length(listchannels(fh))
+

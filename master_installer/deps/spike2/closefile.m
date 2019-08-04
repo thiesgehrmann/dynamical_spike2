@@ -22,7 +22,7 @@ validateattributes(fileID, {'numeric'}, {'nonempty' 'scalar'}, ...
     mfilename, 'fileID', 1);
 
 % Close the file.
-status = fclose(fileID);
+status = CEDS64Close(fileID);
 
 % If we got an error closing the NEX file, throw an error.
 assert(status == 0, 'spike2:closefile:FileCloseError', ...
