@@ -1,0 +1,41 @@
+---
+###########################################################################
+# Required toolboxes for Dynamical to function properly.  The function
+# dynamical.util.assertprereqs.m reads this file.
+###########################################################################
+
+xlWrite:
+    name: 'xlwrite'
+    description: 'Allows non Windows platforms to write to Excel files.'
+    minVersion: '1.0'
+    platform: ['GLNXA64', 'MACI64']
+
+xlRange:
+    name: 'xlRange_and_number2letter'
+    description: 'Converts row/col values into Excel ranges.'
+    minVersion: '1.0'
+    platform: ['PCWIN64', 'GLNXA64', 'MACI64']
+
+guiLayout:
+    name: 'GUI Layout Toolbox'
+    description: 'Core layout engine to render the GUI.'
+    minVersion: '2.3.1'
+    platform: ['PCWIN64', 'GLNXA64', 'MACI64']
+
+YAML:
+    name: 'YAMLToolbox'
+    description: 'YAML processing toolbox'
+    minVersion: '2.0'
+    platform: ['PCWIN64', 'GLNXA64', 'MACI64']
+
+ExcelCol:
+    name: 'ExcelCol'
+    description: 'Converts Excel columns from letter->number and number->letter.'
+    minVersion: '1.0'
+    platform: ['PCWIN64', 'GLNXA64', 'MACI64']
+
+XLSSheetDelete:
+    name: 'xls_delete_sheets'
+    description: 'Allows the deletion of Excel sheets.'
+    minVersion: '1.0'
+    platform: ['PCWIN64']

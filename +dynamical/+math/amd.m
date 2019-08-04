@@ -140,18 +140,19 @@ else
 end
 
 % Open the nex file and get a file descriptor.
-[fid, wasOpened] = nex.opennexfile(input1);
+[fid, wasOpened] = spikenex.openfile(input1);
+input1
 
 % Register a cleanup object that will close the file ID, but only if a
 % filename was specified.
 if wasOpened
-    fileCleanupObj = onCleanup(@() nex.closenexfile(fid));
+    fileCleanupObj = onCleanup(@() spikenex.closenexfile(fid));
 end
 
 % If an end time wasn't specified, then we'll set it to be the maximum file
 % duration found in the NEX file's file header.
 if p.Results.EndTime == Inf
-    fileHeader = nex.readfileheader(fid);
+    fileHeader = spikenex.readfileheader(fid);
     endTime = fileHeader.tend;
 else
     endTime = p.Results.EndTime;
@@ -159,7 +160,7 @@ end
 
 % Read all the neuron data from the NEX file.  The neuron data contains the
 % spike times of interest.
-neuronData = nex.getneurondata(fid);
+neuronData = spikenex.getneurondata(input1);
 nNeurons = height(neuronData);
 
 % Create a set of start/end times for each time window we're going to
@@ -172,7 +173,7 @@ if isempty(p.Results.Intervals)
     intervalTimes = [];
 else
     % Get the time boundaries for all intervals specified.
-    intervalTimes = cellfun(@(x) {nex.getintervaltimes(fid, x, true)}, ...
+    intervalTimes = cellfun(@(x) {spikenex.getintervaltimes(fid, x, true)}, ...
         cellstr(p.Results.Intervals));
     
     % Concatenate all the returned interval times and sort them by the

@@ -79,7 +79,8 @@ obj.ProcessButton.String = '*** Calculating AMD ***';
 obj.ProcessButton.Enable = 'off';
 drawnow;
 t0 = tic;
-amdWindows = dynamical.math.amd(fileData.fid, amdParams{:});
+fileData
+amdWindows = dynamical.math.amd(fileData.path, amdParams{:});
 t = toc(t0);
 dynamical.dprintf(1, '%% AMD - Processing Finished: %g (s)\n', t);
 
