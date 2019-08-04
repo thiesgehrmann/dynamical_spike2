@@ -36,7 +36,7 @@ validateattributes(input1, ...          % File ID or File Name
     {'char' 'string' 'numeric'}, ...    % Valid data classes
     {'vector' 'nonempty'}, ...          % Required data attributes
     mfilename, ...                      % Name of calling function
-    'spike2FileName/fileID', ...           % Argument name
+    'nexFileName/fileID', ...           % Argument name
     1);                                 % Argument position
 
 
@@ -54,6 +54,9 @@ else
     % Copy the file ID to a more descriptive label matching the 'fid' from
     % the code above.
     fid = input1;
+    
+    % Rewind the file descriptor to the beginning of the SPIKE2 file.
+    % frewind(fid); % NOT NEEDED IN SPIKE2 FILES
     
     wasOpened = false;
 end

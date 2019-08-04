@@ -1,14 +1,14 @@
 <deployment-project plugin="plugin.toolbox" plugin-version="1.0">
   <configuration file="C:\Users\Thies\Documents\GitHub\dynamical_spike2\master_installer\deps\spike2\SPIKE2.prj" location="C:\Users\Thies\Documents\GitHub\dynamical_spike2\master_installer\deps\spike2" name="SPIKE2" target="target.toolbox" target-name="Package Toolbox">
-    <param.appname>SPIKE2</param.appname>
+    <param.appname>SPIKENEX</param.appname>
     <param.authnamewatermark>Thies Gehrmann</param.authnamewatermark>
     <param.email>thiesgehrmann@gmail.com</param.email>
     <param.company />
-    <param.summary>Functions to deal with SPIKE2 files, as though they were NEX files.</param.summary>
-    <param.description>Functions to deal with SPIKE2 files, as though they were NEX files.</param.description>
+    <param.summary>Functions to deal with SPIKE2 and NEX files, as though they were both NEX files.</param.summary>
+    <param.description>Functions to deal with SPIKE2 and NEX files, as though they were both NEX files.</param.description>
     <param.screenshot />
     <param.version>1.0</param.version>
-    <param.output>${PROJECT_ROOT}\SPIKE2.mltbx</param.output>
+    <param.output>${PROJECT_ROOT}\SPIKENEX.mltbx</param.output>
     <param.products.name />
     <param.products.id />
     <param.products.version />
@@ -71,16 +71,8 @@
       <file>C:\Users\Thies\Documents\GitHub\dynamical_spike2\master_installer\deps\spike2</file>
     </fileset.rootdir>
     <fileset.rootfiles>
-      <file>${PROJECT_ROOT}\closefile.m</file>
-      <file>${PROJECT_ROOT}\getChannelsOfType.m</file>
-      <file>${PROJECT_ROOT}\getintervaltimes.m</file>
-      <file>${PROJECT_ROOT}\getneurondata.m</file>
-      <file>${PROJECT_ROOT}\getneurondatachannel.m</file>
-      <file>${PROJECT_ROOT}\listchannels.m</file>
-      <file>${PROJECT_ROOT}\listintervalnames.m</file>
-      <file>${PROJECT_ROOT}\loadCEDS64.m</file>
-      <file>${PROJECT_ROOT}\openfile.m</file>
-      <file>${PROJECT_ROOT}\readfileheader.m</file>
+      <file>${PROJECT_ROOT}\+nex</file>
+      <file>${PROJECT_ROOT}\+spike2</file>
     </fileset.rootfiles>
     <fileset.depfun.included />
     <fileset.depfun.excluded>
@@ -103,7 +95,7 @@
     </fileset.depfun.excluded>
     <fileset.package />
     <build-deliverables>
-      <file location="C:\Users\Thies\Documents\GitHub\dynamical_spike2\master_installer\deps\spike2" name="SPIKE2.mltbx" optional="false">C:\Users\Thies\Documents\GitHub\dynamical_spike2\master_installer\deps\spike2\SPIKE2.mltbx</file>
+      <file location="C:\Users\Thies\Documents\GitHub\dynamical_spike2\master_installer\deps\spike2" name="SPIKENEX.mltbx" optional="false">C:\Users\Thies\Documents\GitHub\dynamical_spike2\master_installer\deps\spike2\SPIKENEX.mltbx</file>
     </build-deliverables>
     <workflow />
     <matlab>
