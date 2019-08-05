@@ -95,7 +95,7 @@ fprintf('# Closing Dynamical\n');
 
 fileData = dynamical.ui.getfileappdata;
 if ~isempty(fileData)
-    fclose(fileData.fid);
+    spikenex.closefile(fileData.fid);
 end
 
 closereq;

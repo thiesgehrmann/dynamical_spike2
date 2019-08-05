@@ -33,7 +33,7 @@ I need to modify this to determine whether a nex file or a spike file is being u
 These already work fine!
  - [X] opennexfile -> openfile
  - [X] closenexfile -> closefile
- - [ ] readfileheader
+ - [X] readfileheader
   - Used in:
     - +dynamical\+math\amd.m
     - +dynamical\+ui\+objects\@AMDParamsPanel\fileOpenedHandler.m
