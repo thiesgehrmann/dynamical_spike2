@@ -25,18 +25,18 @@ validateattributes(input1, {'char', 'numeric'}, {'vector'}, 1);
 % *** What does the phase file do? ***
 
 % Open/prepare the NEX file for access.
-fid = spikenex.openfile(input1);
+fid = dynamical_inputs.openfile(input1);
 
 % Get a list of the interval names.  The only interval name we want to
 % ignore is 'AllFile' as it seems to be functionaly useless in all the Aton
 % data files.
-intervalNames = spikenex.listintervalnames(fid);
+intervalNames = dynamical_inputs.listintervalnames(fid);
 intervalNames = intervalNames(~strcmpi('AllFile', intervalNames));
 nIntervals = length(intervalNames);
 
 % Create an empty table to hold the phase table.  The phase table will be a
 % concatenation of several interval tables, as returned by
-% spikenex.getintervaltimes, with the addition of a PhaseType column containing
+% dynamical_inputs.getintervaltimes, with the addition of a PhaseType column containing
 % the associated enumeration value.
 phaseTable = table([], [], [], [], 'VariableNames', ...
     {'Start', 'End', 'Duration', 'PhaseType'});
@@ -63,7 +63,7 @@ for iName = 1:nIntervals
     end
     
     % Extract the interval times associated with the current interval type.
-    intervalTable = spikenex.getintervaltimes(fid, pType);
+    intervalTable = dynamical_inputs.getintervaltimes(fid, pType);
     
     % Create a table column that has the interval type code (drawn from the
     % dynamical.PhaseType enumeration) duplicated across each row.

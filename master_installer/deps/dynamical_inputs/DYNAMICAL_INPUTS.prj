@@ -1,0 +1,93 @@
+<deployment-project plugin="plugin.toolbox" plugin-version="1.0">
+  <configuration file="/Users/thiesgehrmann/repos/dynamical_spike2/master_installer/deps/dynamical_inputs/DYNAMICAL_INPUTS.prj" location="/Users/thiesgehrmann/repos/dynamical_spike2/master_installer/deps/dynamical_inputs" name="DYNAMICAL_INPUTS" target="target.toolbox" target-name="Package Toolbox">
+    <param.appname>DYNAMICAL_INPUTS</param.appname>
+    <param.authnamewatermark>Thies Gehrmann</param.authnamewatermark>
+    <param.email>thiesgehrmann@gmail.com</param.email>
+    <param.company>LUMC</param.company>
+    <param.summary>Functions to deal with SPIKE2, NEX and MAT files, as though they were all NEX files. Tested in R2018b onwards.</param.summary>
+    <param.description>Functions to deal with SPIKE2, NEX and MAT files, as though they were all NEX files. Tested in R2018b onwards.</param.description>
+    <param.screenshot />
+    <param.version>1.0</param.version>
+    <param.output>${PROJECT_ROOT}/DYNAMICAL_INPUTS.mltbx</param.output>
+    <param.products.name />
+    <param.products.id />
+    <param.products.version />
+    <param.platforms />
+    <param.guid>245d496a-e632-49dc-a185-5857dab6b5f0</param.guid>
+    <param.exclude.filters />
+    <param.exclude.pcodedmfiles>true</param.exclude.pcodedmfiles>
+    <param.examples />
+    <param.demosxml />
+    <param.apps />
+    <param.registered.apps />
+    <param.docs />
+    <param.getting.started.guide />
+    <param.matlabpath.excludes />
+    <param.javaclasspath.excludes />
+    <param.exported.on.package>false</param.exported.on.package>
+    <param.release.start>R2018a</param.release.start>
+    <param.release.end>latest</param.release.end>
+    <param.release.current.only>false</param.release.current.only>
+    <param.compatiblity.windows>true</param.compatiblity.windows>
+    <param.compatiblity.macos>true</param.compatiblity.macos>
+    <param.compatiblity.linux>true</param.compatiblity.linux>
+    <param.compatiblity.matlabonline>true</param.compatiblity.matlabonline>
+    <unset>
+      <param.screenshot />
+      <param.version />
+      <param.output />
+      <param.products.name />
+      <param.products.id />
+      <param.products.version />
+      <param.platforms />
+      <param.exclude.filters />
+      <param.exclude.pcodedmfiles />
+      <param.examples />
+      <param.demosxml />
+      <param.apps />
+      <param.registered.apps />
+      <param.docs />
+      <param.getting.started.guide />
+      <param.matlabpath.excludes />
+      <param.javaclasspath.excludes />
+      <param.exported.on.package />
+      <param.release.current.only />
+      <param.compatiblity.windows />
+      <param.compatiblity.macos />
+      <param.compatiblity.linux />
+      <param.compatiblity.matlabonline />
+    </unset>
+    <fileset.rootdir>
+      <file>/Users/thiesgehrmann/repos/dynamical_spike2/master_installer/deps/dynamical_inputs</file>
+    </fileset.rootdir>
+    <fileset.rootfiles>
+      <file>${PROJECT_ROOT}/+dynamical_inputs</file>
+    </fileset.rootfiles>
+    <fileset.depfun.included />
+    <fileset.depfun.excluded />
+    <fileset.package />
+    <build-deliverables>
+      <file location="/Users/thiesgehrmann/repos/dynamical_spike2/master_installer/deps/dynamical_inputs" name="DYNAMICAL_INPUTS.mltbx" optional="false">/Users/thiesgehrmann/repos/dynamical_spike2/master_installer/deps/dynamical_inputs/DYNAMICAL_INPUTS.mltbx</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>/Applications/MATLAB_R2018a.app</root>
+      <toolboxes />
+    </matlab>
+    <platform>
+      <unix>true</unix>
+      <mac>true</mac>
+      <windows>false</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.14.6</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>maci64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>

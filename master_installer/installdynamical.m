@@ -15,5 +15,5 @@ for i = 1:nToolboxes
 end
 
 fprintf('%% Installing: DynamicalToolboxSPIKENEX...');
-matlab.addons.toolbox.installToolbox(fullfile(fileparts(which(mfilename)), 'DynamicalToolboxSPIKENEX.mltbx'));
+%matlab.addons.toolbox.installToolbox(fullfile(fileparts(which(mfilename)), 'DynamicalToolboxSPIKENEX.mltbx'));
 fprintf('Done\n');

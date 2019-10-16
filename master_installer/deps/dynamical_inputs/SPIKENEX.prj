@@ -1,0 +1,154 @@
+<deployment-project plugin="plugin.toolbox" plugin-version="1.0">
+  <configuration file="C:\Users\Thies\Documents\GitHub\dynamical_spike2\master_installer\deps\spikenex\SPIKENEX.prj" location="C:\Users\Thies\Documents\GitHub\dynamical_spike2\master_installer\deps\spikenex" name="SPIKENEX" target="target.toolbox" target-name="Package Toolbox">
+    <param.appname>SPIKENEX</param.appname>
+    <param.authnamewatermark>Thies Gehrmann</param.authnamewatermark>
+    <param.email>thiesgehrmann@gmail.com</param.email>
+    <param.company />
+    <param.summary>Functions to deal with SPIKE2 and NEX files, as though they were both NEX files.</param.summary>
+    <param.description>Functions to deal with SPIKE2 and NEX files, as though they were both NEX files. Tested in R2018b onwards.</param.description>
+    <param.screenshot />
+    <param.version>1.0</param.version>
+    <param.output>${PROJECT_ROOT}\SPIKENEX.mltbx</param.output>
+    <param.products.name />
+    <param.products.id />
+    <param.products.version />
+    <param.platforms />
+    <param.guid>9738f924-4d20-44b4-af4a-b27fce3b5f19</param.guid>
+    <param.exclude.filters />
+    <param.exclude.pcodedmfiles>true</param.exclude.pcodedmfiles>
+    <param.examples />
+    <param.demosxml />
+    <param.apps />
+    <param.registered.apps />
+    <param.docs />
+    <param.getting.started.guide />
+    <param.matlabpath.excludes />
+    <param.javaclasspath.excludes />
+    <param.exported.on.package>false</param.exported.on.package>
+    <param.release.start>R2018a</param.release.start>
+    <param.release.end>latest</param.release.end>
+    <param.release.current.only>false</param.release.current.only>
+    <param.compatiblity.windows>true</param.compatiblity.windows>
+    <param.compatiblity.macos>false</param.compatiblity.macos>
+    <param.compatiblity.linux>false</param.compatiblity.linux>
+    <param.compatiblity.matlabonline>false</param.compatiblity.matlabonline>
+    <param.installation.map />
+    <param.additional.sw.names />
+    <param.additional.sw.licenses />
+    <param.additional.sw.win.url />
+    <param.additional.sw.mac.url />
+    <param.additional.sw.linux.url />
+    <unset>
+      <param.company />
+      <param.screenshot />
+      <param.version />
+      <param.output />
+      <param.products.name />
+      <param.products.id />
+      <param.products.version />
+      <param.platforms />
+      <param.exclude.filters />
+      <param.exclude.pcodedmfiles />
+      <param.examples />
+      <param.demosxml />
+      <param.apps />
+      <param.registered.apps />
+      <param.docs />
+      <param.getting.started.guide />
+      <param.matlabpath.excludes />
+      <param.javaclasspath.excludes />
+      <param.exported.on.package />
+      <param.release.current.only />
+      <param.compatiblity.windows />
+      <param.installation.map />
+      <param.additional.sw.names />
+      <param.additional.sw.licenses />
+      <param.additional.sw.win.url />
+      <param.additional.sw.mac.url />
+      <param.additional.sw.linux.url />
+    </unset>
+    <fileset.rootdir>
+      <file>C:\Users\Thies\Documents\GitHub\dynamical_spike2\master_installer\deps\spikenex</file>
+    </fileset.rootdir>
+    <fileset.rootfiles>
+      <file>${PROJECT_ROOT}\+spikenex</file>
+    </fileset.rootfiles>
+    <fileset.depfun.included />
+    <fileset.depfun.excluded>
+      <file>C:\Users\Thies\AppData\Roaming\MathWorks\MATLAB Add-Ons\Toolboxes\NEXToolbox\+nex\closenexfile.m</file>
+      <file>C:\Users\Thies\AppData\Roaming\MathWorks\MATLAB Add-Ons\Toolboxes\NEXToolbox\+nex\listintervalnames.m</file>
+      <file>C:\Users\Thies\AppData\Roaming\MathWorks\MATLAB Add-Ons\Toolboxes\NEXToolbox\+nex\NexVariableTypes.m</file>
+      <file>C:\Users\Thies\AppData\Roaming\MathWorks\MATLAB Add-Ons\Toolboxes\NEXToolbox\+nex\opennexfile.m</file>
+      <file>C:\Users\Thies\AppData\Roaming\MathWorks\MATLAB Add-Ons\Toolboxes\NEXToolbox\+nex\readfileheader.m</file>
+      <file>C:\Users\Thies\AppData\Roaming\MathWorks\MATLAB Add-Ons\Toolboxes\NEXToolbox\+nex\readvariabledata.m</file>
+      <file>C:\Users\Thies\AppData\Roaming\MathWorks\MATLAB Add-Ons\Toolboxes\NEXToolbox\+nex\readvariableheaders.m</file>
+    </fileset.depfun.excluded>
+    <fileset.package />
+    <build-deliverables>
+      <file location="C:\Users\Thies\Documents\GitHub\dynamical_spike2\master_installer\deps\spikenex" name="SPIKENEX.mltbx" optional="false">C:\Users\Thies\Documents\GitHub\dynamical_spike2\master_installer\deps\spikenex\SPIKENEX.mltbx</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\Program Files\MATLAB\R2018b</root>
+      <toolboxes>
+        <toolbox name="matlabcoder" />
+        <toolbox name="embeddedcoder" />
+        <toolbox name="gpucoder" />
+        <toolbox name="fixedpoint" />
+        <toolbox name="matlabhdlcoder" />
+        <toolbox name="polyspacebugfinder" />
+        <toolbox name="neuralnetwork" />
+      </toolboxes>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
+      <toolbox>
+        <embeddedcoder>
+          <enabled>true</enabled>
+        </embeddedcoder>
+      </toolbox>
+      <toolbox>
+        <gpucoder>
+          <enabled>true</enabled>
+        </gpucoder>
+      </toolbox>
+      <toolbox>
+        <fixedpoint>
+          <enabled>true</enabled>
+        </fixedpoint>
+      </toolbox>
+      <toolbox>
+        <matlabhdlcoder>
+          <enabled>true</enabled>
+        </matlabhdlcoder>
+      </toolbox>
+      <toolbox>
+        <polyspacebugfinder>
+          <enabled>true</enabled>
+        </polyspacebugfinder>
+      </toolbox>
+      <toolbox>
+        <neuralnetwork>
+          <enabled>true</enabled>
+        </neuralnetwork>
+      </toolbox>
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.0</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>

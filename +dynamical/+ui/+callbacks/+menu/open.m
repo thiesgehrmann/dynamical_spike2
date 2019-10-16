@@ -10,7 +10,7 @@ function open(~, ~)
 narginchk(2, 2);
 
 % Show a file dialog that let's the user select a .nex file.
-[fileName, pathName] = uigetfile({'*.nex;*.smrx;*.smr', 'Valid files (*.nex, *.smrx, *.smr)'}, 'Select a NEX/SMRX file');
+[fileName, pathName] = uigetfile({'*.nex;*.smrx;*.smr;*.mat', 'Valid files (*.nex, *.smrx, *.smr, *.mat)'}, 'Select a NEX/SMRX file');
 
 % If the user didn't cancel the dialog box, store some of the file info in
 % the main window's app data.
@@ -19,7 +19,7 @@ if ~isequal(fileName, 0)
     % easy access to the file identifier.  The file identifier lets us
     % access the NEX data using the NEX toolbox functions.
     fileData.path = fullfile(pathName, fileName);
-    fileData.fid = spikenex.openfile(fileData.path);
+    fileData.fid = dynamical_inputs.openfile(fileData.path);
     dynamical.ui.setfileappdata(fileData);
     
     dynamical.dprintf(2, '# Open File: %s\n', fileData.path);

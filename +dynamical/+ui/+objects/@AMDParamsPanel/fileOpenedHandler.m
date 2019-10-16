@@ -16,11 +16,11 @@ dynamical.dprintf(2, '# AMDParamsPanel:fileOpenedHandler\n');
 % Exclude intervals that are listed in the config to be ignored.
 config = dynamical.config.readconfig;
 ignoredIntervals = string(config.analysis.ignoredIntervalTypes)';
-allIntervals = spikenex.listintervalnames(eventData.FileID);
+allIntervals = dynamical_inputs.listintervalnames(eventData.FileID);
 obj.IntervalNames = setdiff(allIntervals, ignoredIntervals);
 
 % Get the file meta info.
-fileHeader = spikenex.readfileheader(eventData.FileID);
+fileHeader = dynamical_inputs.readfileheader(eventData.FileID);
 obj.StartTime = fileHeader.tbeg;
 obj.StopTime = fileHeader.tend;
 

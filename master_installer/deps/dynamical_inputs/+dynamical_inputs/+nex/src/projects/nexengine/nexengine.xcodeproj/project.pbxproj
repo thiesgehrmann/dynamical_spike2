@@ -1,0 +1,78 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		802E068E1BA063B80027F172 /* nexengine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = nexengine.cpp; path = ../../nexengine.cpp; sourceTree = "<group>"; };
+		802E068F1BA063B80027F172 /* nexengine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = nexengine.h; path = ../../nexengine.h; sourceTree = "<group>"; };
+		802E06901BA063B80027F172 /* NexFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NexFile.h; path = ../../NexFile.h; sourceTree = "<group>"; };
+		802E06911BA063B80027F172 /* NexFileVariables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NexFileVariables.h; path = ../../NexFileVariables.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		802E06871BA062AB0027F172 = {
+			isa = PBXGroup;
+			children = (
+				802E068E1BA063B80027F172 /* nexengine.cpp */,
+				802E068F1BA063B80027F172 /* nexengine.h */,
+				802E06901BA063B80027F172 /* NexFile.h */,
+				802E06911BA063B80027F172 /* NexFileVariables.h */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		802E06881BA062AB0027F172 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+			};
+			buildConfigurationList = 802E068B1BA062AB0027F172 /* Build configuration list for PBXProject "nexengine" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 802E06871BA062AB0027F172;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		802E068C1BA062AB0027F172 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		802E068D1BA062AB0027F172 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		802E068B1BA062AB0027F172 /* Build configuration list for PBXProject "nexengine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				802E068C1BA062AB0027F172 /* Debug */,
+				802E068D1BA062AB0027F172 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 802E06881BA062AB0027F172 /* Project object */;
+}
