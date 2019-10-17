@@ -55,11 +55,11 @@ comment = {};
 
 % Timestamps frequency (Hz) - Timestamp values are stored in ticks,
 % where tick = 1/frequency.
-fileHeader.freq = 0; % UNKNOWN in MAT files
+fileHeader.freq = 100; % UNKNOWN in MAT files
 
 % Min/Max Timestamp in SECONDS
-fileHeader.tbeg = min(cellfun(@min, S.neurondata.timestamps)) ;
-fileHeader.tend = max(cellfun(@max, S.neurondata.timestamps)) ;
+fileHeader.tbeg = min(cellfun(@min, S.neurondata.timestamps)) / fileHeader.freq ;
+fileHeader.tend = max(cellfun(@max, S.neurondata.timestamps)) / fileHeader.freq ;
 
 % Number of variables in the file, e.g. continuous, event, markers.
 fileHeader.numvars = 0;

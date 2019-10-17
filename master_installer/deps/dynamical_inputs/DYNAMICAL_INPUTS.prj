@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.toolbox" plugin-version="1.0">
-  <configuration file="/Users/thiesgehrmann/repos/dynamical_spike2/master_installer/deps/dynamical_inputs/DYNAMICAL_INPUTS.prj" location="/Users/thiesgehrmann/repos/dynamical_spike2/master_installer/deps/dynamical_inputs" name="DYNAMICAL_INPUTS" target="target.toolbox" target-name="Package Toolbox">
+  <configuration file="C:\Users\Thies\Documents\GitHub\dynamical_spike2\master_installer\deps\dynamical_inputs\DYNAMICAL_INPUTS.prj" location="C:\Users\Thies\Documents\GitHub\dynamical_spike2\master_installer\deps\dynamical_inputs" name="DYNAMICAL_INPUTS" target="target.toolbox" target-name="Package Toolbox">
     <param.appname>DYNAMICAL_INPUTS</param.appname>
     <param.authnamewatermark>Thies Gehrmann</param.authnamewatermark>
     <param.email>thiesgehrmann@gmail.com</param.email>
@@ -8,7 +8,7 @@
     <param.description>Functions to deal with SPIKE2, NEX and MAT files, as though they were all NEX files. Tested in R2018b onwards.</param.description>
     <param.screenshot />
     <param.version>1.0</param.version>
-    <param.output>${PROJECT_ROOT}/DYNAMICAL_INPUTS.mltbx</param.output>
+    <param.output>${PROJECT_ROOT}\DYNAMICAL_INPUTS.mltbx</param.output>
     <param.products.name />
     <param.products.id />
     <param.products.version />
@@ -32,6 +32,12 @@
     <param.compatiblity.macos>true</param.compatiblity.macos>
     <param.compatiblity.linux>true</param.compatiblity.linux>
     <param.compatiblity.matlabonline>true</param.compatiblity.matlabonline>
+    <param.installation.map />
+    <param.additional.sw.names />
+    <param.additional.sw.licenses />
+    <param.additional.sw.win.url />
+    <param.additional.sw.mac.url />
+    <param.additional.sw.linux.url />
     <unset>
       <param.screenshot />
       <param.version />
@@ -56,37 +62,117 @@
       <param.compatiblity.macos />
       <param.compatiblity.linux />
       <param.compatiblity.matlabonline />
+      <param.installation.map />
+      <param.additional.sw.names />
+      <param.additional.sw.licenses />
+      <param.additional.sw.win.url />
+      <param.additional.sw.mac.url />
+      <param.additional.sw.linux.url />
     </unset>
     <fileset.rootdir>
-      <file>/Users/thiesgehrmann/repos/dynamical_spike2/master_installer/deps/dynamical_inputs</file>
+      <file>C:\Users\Thies\Documents\GitHub\dynamical_spike2\master_installer\deps\dynamical_inputs</file>
     </fileset.rootdir>
     <fileset.rootfiles>
-      <file>${PROJECT_ROOT}/+dynamical_inputs</file>
+      <file>${PROJECT_ROOT}\+dynamical_inputs</file>
     </fileset.rootfiles>
     <fileset.depfun.included />
-    <fileset.depfun.excluded />
+    <fileset.depfun.excluded>
+      <file>C:\CEDMATLAB\CEDS64ML\CEDMarker.m</file>
+      <file>C:\CEDMATLAB\CEDS64ML\CEDS64ChanMaxTime.m</file>
+      <file>C:\CEDMATLAB\CEDS64ML\CEDS64ChanType.m</file>
+      <file>C:\CEDMATLAB\CEDS64ML\CEDS64Close.m</file>
+      <file>C:\CEDMATLAB\CEDS64ML\CEDS64CloseAll.m</file>
+      <file>C:\CEDMATLAB\CEDS64ML\CEDS64FileComment.m</file>
+      <file>C:\CEDMATLAB\CEDS64ML\CEDS64IsOpen.m</file>
+      <file>C:\CEDMATLAB\CEDS64ML\CEDS64LoadLib.m</file>
+      <file>C:\CEDMATLAB\CEDS64ML\CEDS64MaxChan.m</file>
+      <file>C:\CEDMATLAB\CEDS64ML\CEDS64MaxTime.m</file>
+      <file>C:\CEDMATLAB\CEDS64ML\CEDS64Open.m</file>
+      <file>C:\CEDMATLAB\CEDS64ML\CEDS64ReadMarkers.m</file>
+      <file>C:\CEDMATLAB\CEDS64ML\CEDS64SecsToTicks.m</file>
+      <file>C:\CEDMATLAB\CEDS64ML\CEDS64TicksToSecs.m</file>
+      <file>C:\CEDMATLAB\CEDS64ML\CEDS64TimeBase.m</file>
+      <file>C:\CEDMATLAB\CEDS64ML\CEDS64Version.m</file>
+      <file>C:\CEDMATLAB\CEDS64ML\x64\ceds64Prot.m</file>
+      <file>C:\Users\Thies\AppData\Roaming\MathWorks\MATLAB Add-Ons\Toolboxes\NEXToolbox\+nex\closenexfile.m</file>
+      <file>C:\Users\Thies\AppData\Roaming\MathWorks\MATLAB Add-Ons\Toolboxes\NEXToolbox\+nex\listintervalnames.m</file>
+      <file>C:\Users\Thies\AppData\Roaming\MathWorks\MATLAB Add-Ons\Toolboxes\NEXToolbox\+nex\NexVariableTypes.m</file>
+      <file>C:\Users\Thies\AppData\Roaming\MathWorks\MATLAB Add-Ons\Toolboxes\NEXToolbox\+nex\opennexfile.m</file>
+      <file>C:\Users\Thies\AppData\Roaming\MathWorks\MATLAB Add-Ons\Toolboxes\NEXToolbox\+nex\readfileheader.m</file>
+      <file>C:\Users\Thies\AppData\Roaming\MathWorks\MATLAB Add-Ons\Toolboxes\NEXToolbox\+nex\readvariabledata.m</file>
+      <file>C:\Users\Thies\AppData\Roaming\MathWorks\MATLAB Add-Ons\Toolboxes\NEXToolbox\+nex\readvariableheaders.m</file>
+      <file>C:\Users\Thies\AppData\Roaming\MathWorks\MATLAB Add-Ons\Toolboxes\SPIKENEX(2)\+spikenex\+nex\getcontinuousdata.m</file>
+      <file>C:\Users\Thies\AppData\Roaming\MathWorks\MATLAB Add-Ons\Toolboxes\SPIKENEX(2)\+spikenex\+nex\readvariableheaders.m</file>
+      <file>C:\Users\Thies\AppData\Roaming\MathWorks\MATLAB Add-Ons\Toolboxes\SPIKENEX(2)\+spikenex\+spike2\closefile.m</file>
+      <file>C:\Users\Thies\AppData\Roaming\MathWorks\MATLAB Add-Ons\Toolboxes\SPIKENEX(2)\+spikenex\+spike2\listchannels.m</file>
+      <file>C:\Users\Thies\AppData\Roaming\MathWorks\MATLAB Add-Ons\Toolboxes\SPIKENEX(2)\+spikenex\+spike2\loadCEDS64.m</file>
+      <file>C:\Users\Thies\AppData\Roaming\MathWorks\MATLAB Add-Ons\Toolboxes\SPIKENEX(2)\+spikenex\+spike2\openfile.m</file>
+    </fileset.depfun.excluded>
     <fileset.package />
     <build-deliverables>
-      <file location="/Users/thiesgehrmann/repos/dynamical_spike2/master_installer/deps/dynamical_inputs" name="DYNAMICAL_INPUTS.mltbx" optional="false">/Users/thiesgehrmann/repos/dynamical_spike2/master_installer/deps/dynamical_inputs/DYNAMICAL_INPUTS.mltbx</file>
+      <file location="C:\Users\Thies\Documents\GitHub\dynamical_spike2\master_installer\deps\dynamical_inputs" name="DYNAMICAL_INPUTS.mltbx" optional="false">C:\Users\Thies\Documents\GitHub\dynamical_spike2\master_installer\deps\dynamical_inputs\DYNAMICAL_INPUTS.mltbx</file>
     </build-deliverables>
     <workflow />
     <matlab>
-      <root>/Applications/MATLAB_R2018a.app</root>
-      <toolboxes />
+      <root>C:\Program Files\MATLAB\R2018b</root>
+      <toolboxes>
+        <toolbox name="matlabcoder" />
+        <toolbox name="embeddedcoder" />
+        <toolbox name="gpucoder" />
+        <toolbox name="fixedpoint" />
+        <toolbox name="matlabhdlcoder" />
+        <toolbox name="polyspacebugfinder" />
+        <toolbox name="neuralnetwork" />
+      </toolboxes>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
+      <toolbox>
+        <embeddedcoder>
+          <enabled>true</enabled>
+        </embeddedcoder>
+      </toolbox>
+      <toolbox>
+        <gpucoder>
+          <enabled>true</enabled>
+        </gpucoder>
+      </toolbox>
+      <toolbox>
+        <fixedpoint>
+          <enabled>true</enabled>
+        </fixedpoint>
+      </toolbox>
+      <toolbox>
+        <matlabhdlcoder>
+          <enabled>true</enabled>
+        </matlabhdlcoder>
+      </toolbox>
+      <toolbox>
+        <polyspacebugfinder>
+          <enabled>true</enabled>
+        </polyspacebugfinder>
+      </toolbox>
+      <toolbox>
+        <neuralnetwork>
+          <enabled>true</enabled>
+        </neuralnetwork>
+      </toolbox>
     </matlab>
     <platform>
-      <unix>true</unix>
-      <mac>true</mac>
-      <windows>false</windows>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
       <win2k>false</win2k>
       <winxp>false</winxp>
       <vista>false</vista>
       <linux>false</linux>
       <solaris>false</solaris>
-      <osver>10.14.6</osver>
+      <osver>10.0</osver>
       <os32>false</os32>
       <os64>true</os64>
-      <arch>maci64</arch>
+      <arch>win64</arch>
       <matlab>true</matlab>
     </platform>
   </configuration>

@@ -1,7 +1,10 @@
 function pass = verify_struct(S)
-    assert(isstruct(S), "dynamical_inputs:mat:verify_struct:NotStruct", "The data is not a struct")
-    assert(any(strcmp(fieldnames(S), 'neurondata')), "dynamical_inputs:mat:verify_struct:MissingData", "There was no table with neurondata available.")
-    assert(istable(S.neurondata), "dynamical_inputs:mat:verify_struct:Invalid", "The structure is invalid.")
-
-    pass = true;
-end
+		if not(isstruct(S))
+			pass = false;
+		elseif not(any(strcmp(fieldnames(S), 'neurondata')))
+			pass = false;
+		elseif not(istable(S.neurondata))
+			pass = false;
+		else
+			pass = true;
+		end

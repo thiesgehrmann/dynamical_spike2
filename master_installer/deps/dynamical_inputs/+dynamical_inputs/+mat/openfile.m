@@ -51,4 +51,8 @@ else
     wasOpened = false;
 end
 
-dynamical_inputs.mat.verify_struct(data);
+assert(isstruct(data), "dynamical_inputs:mat:verify_struct:NotStruct", "The data is not a struct")
+assert(any(strcmp(fieldnames(data), 'neurondata')), "dynamical_inputs:mat:verify_struct:MissingData", "There was no table with neurondata available.")
+assert(istable(data.neurondata), "dynamical_inputs:mat:verify_struct:Invalid", "The structure is invalid.")
+
+assert(dynamical_inputs.mat.verify_struct(data), "dynamical_inputs:mat:openfile:NotValid", "The input file does not contain a valid structure!");
